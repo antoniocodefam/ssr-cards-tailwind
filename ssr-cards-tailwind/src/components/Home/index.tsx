@@ -8,15 +8,15 @@ export interface HomeProps {
 
 export default function Home({ posts, error }: HomeProps) {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Home Page</h1>
-      <ul>
+    <>
+      <h1 className="text-4xl text-center mb-5 md:mb-10">Posts overview</h1>
+      <ul className="flex flex-wrap gap-x-3 gap-y-6 justify-center">
         {posts.map((post) => (
           <li key={post.id}>
             <PostCard post={post} />
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }

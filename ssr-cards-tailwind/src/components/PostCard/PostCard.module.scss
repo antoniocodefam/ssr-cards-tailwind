@@ -1,0 +1,19 @@
+@use "../../styles/mixins";
+
+.card {
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.0125);
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  @include mixins.smRevertMedia {
+    img {
+      max-height: 220px;
+    }
+  }
+}

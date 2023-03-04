@@ -1,5 +1,4 @@
 export default async function handler(req, res) {
-  // TODO: Add types
   try {
     const data = await fetch(`${process.env.API}/photos`);
     const photos = await data.json();

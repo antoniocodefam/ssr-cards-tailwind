@@ -1,0 +1,11 @@
+@mixin smMedia {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin smRevertMedia {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
