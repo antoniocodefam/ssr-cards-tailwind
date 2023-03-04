@@ -6,9 +6,9 @@ export interface HomeCardsProps {
 }
 export default function HomeCards({ posts }: HomeCardsProps) {
   return (
-    <ul className="flex flex-wrap gap-x-3 gap-y-6 justify-center">
+    <ul className="flex flex-wrap gap-x-3 gap-y-6 justify-center" title="Posts">
       {posts.map((post) => (
-        <li key={post.id}>
+        <li key={post.id} title={post.title}>
           <PostCard post={post} />
         </li>
       ))}
