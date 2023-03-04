@@ -1,2 +1,3 @@
-import HomePage from "../src/pages";
+import HomePage, { getServerSideProps } from "../src/pages";
 export default HomePage;
+export { getServerSideProps };
