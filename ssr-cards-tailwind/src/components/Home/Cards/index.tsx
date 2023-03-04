@@ -15,3 +15,5 @@ export default function HomeCards({ posts }: HomeCardsProps) {
     </ul>
   );
 }
+
+export const HOME_CARDS_PER_PAGE = 8;

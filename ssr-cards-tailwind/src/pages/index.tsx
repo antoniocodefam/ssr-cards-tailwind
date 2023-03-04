@@ -1,12 +1,13 @@
 import { PhotosReponse } from "../api/photos";
 import { PostsResponse } from "../api/posts";
 import Home, { HomeProps } from "../components/Home";
+import { HOME_CARDS_PER_PAGE } from "../components/Home/Cards";
 
 export default function HomePage(props: HomeProps) {
   return <Home {...props} />;
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(ctx) {
   let posts = [];
   let error = false;
 
@@ -33,6 +34,8 @@ export async function getServerSideProps() {
     props: {
       posts,
       error,
+      page: +ctx.query.page || 1,
+      totalPages: Math.ceil(posts.length / HOME_CARDS_PER_PAGE),
     },
   };
 }
