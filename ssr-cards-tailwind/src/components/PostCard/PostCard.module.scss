@@ -1,0 +1,24 @@
+@use "../../styles/mixins";
+
+.card {
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.0125);
+  }
+
+  @include mixins.smRevertMedia {
+    width: 90vw;
+  }
+}
+
+.image {
+  img {
+    object-fit: cover;
+  }
+
+  @include mixins.smRevertMedia {
+    display: flex;
+    justify-content: center;
+  }
+}

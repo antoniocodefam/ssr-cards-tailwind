@@ -1,0 +1,13 @@
+@use "./breakpoints";
+
+@mixin smMedia {
+  @media screen and (max-width: map-get(breakpoints.$breakpoints, "sm")) {
+    @content;
+  }
+}
+
+@mixin smRevertMedia {
+  @media screen and (max-width: map-get(breakpoints.$breakpoints, "sm")) {
+    @content;
+  }
+}
