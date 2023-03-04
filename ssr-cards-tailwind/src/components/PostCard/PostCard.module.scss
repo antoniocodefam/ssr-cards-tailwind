@@ -7,13 +7,18 @@
     transform: scale(1.0125);
   }
 
+  @include mixins.smRevertMedia {
+    width: 90vw;
+  }
+}
+
+.image {
   img {
     object-fit: cover;
   }
 
   @include mixins.smRevertMedia {
-    img {
-      max-height: 220px;
-    }
+    display: flex;
+    justify-content: center;
   }
 }
